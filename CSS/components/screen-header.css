@@ -16,6 +16,18 @@
   position: relative;
 }
 
+@keyframes notification__2beat {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scalex(1.5) scaleY(1.5);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 .screen-header__icons__notification {
   background-color: tomato;
   width: 6px;
@@ -27,4 +39,19 @@
   position: absolute;
   left: 25px;
   bottom: 20px;
+  animation: notification__2beat 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-cog:hover {
+  animation: rotateCog 1s linear infinite;
 }
